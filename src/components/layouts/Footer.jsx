@@ -1,8 +1,9 @@
-import { FacebookFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons'
+import { ArrowRightOutlined, FacebookFilled, InstagramFilled, LinkedinFilled, RightOutlined } from '@ant-design/icons'
 import Link from 'antd/es/typography/Link'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Footer = () => {
+  const [hovered, setHovered] = useState(null);
   const services = [
 {title: "Lead Generation",link:"https://ipolygon.co/data-driven-marketing/"},
 {title: "Data Visualisation & Analytics",link:"https://ipolygon.co/data-driven-marketing/"},
@@ -33,7 +34,11 @@ const Footer = () => {
 <p className="pb-1">Bandra-Kurla Complex, Bandra East, Mumbai -400051</p>
 <p className="pb-1"> <strong>Email:</strong>   <a href={"mailto:info@polygonpixels.com"} alt="" className='hover:text-[#0034dd]' >info@polygonpixels.com</a> </p>
 <p className="pb-10"><strong>Contact: </strong> <a href={"tel:+918169852929"} alt="" className='hover:text-[#0034dd]' >+918169852929         </a> </p>
-<div className='flex justify-center items-center text-center '><button className=' bg-[#0034dd] ml-[-12%]  h-[6vh] w-[33vw] lg:h-[5vh] lg:w-[8vw] rounded-full'>Inquire Now </button></div>
+<div className='flex lg:pr-[75%] justify-center items-center text-center '>
+  <button 
+    onMouseEnter={() => setHovered(true)}
+    onMouseLeave={() => setHovered(false)} 
+  className=' bg-[#0034dd] ml-[-12%]  h-[6vh] w-[33vw] lg:h-[5vh] lg:w-[8vw] rounded-full transition-transform transform hover:scale-110 hover:shadow-2xl duration-300 ease-in-out cursor-pointer'>Inquire Now &nbsp; { hovered ? <ArrowRightOutlined/> : <RightOutlined/>} </button></div>
 
 <nav className={`hidden md:flex  items-center gap-8 font-semibold  pt-8`} >
         <a href={'#'} style={{ fontWeight:'400' }} className=' text-white text-md leading-10 tracking-wide hover:text-[#0034dd]' >Home        </a>

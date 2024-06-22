@@ -1,12 +1,21 @@
-import { DesktopOutlined, FireOutlined, RiseOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined, DesktopOutlined, FireOutlined, RightOutlined, RiseOutlined } from '@ant-design/icons';
 import { Anchor, Tabs } from 'antd'
 import React, { useState } from 'react'
 
 const CentralTabs = () => {
 
-    const onChange = (key) => {
-        console.log(key);
+  const [hovered, setHovered] = useState(null);
+
+      const [fade, setFade] = useState('fade-in');
+
+      const onChange = (key) => {
+        setFade('fade-out'); // Trigger fade-out animation
+        setTimeout(() => {
+          setTabKey(key);
+          setFade('fade-in'); // Trigger fade-in animation after content change
+        }, 300); // Duration should match the fade-out animation duration
       };
+    
       const items = [
         {
           key: '1',
@@ -24,7 +33,9 @@ const CentralTabs = () => {
                 <li>Search Engine Optimisation (SEO) & Search Engine Marketing (SEM)</li>
                 <li>Growth Hacking</li>
             </ul>
-            <button className="bg-[#0034dd]  text-white text-sm  flex justify-center text-center items-center cursor-pointer lg:h-[5vh] lg:w-[8vw] h-[6vh] w-[40%] ">Get Started</button>
+            <button                        onMouseEnter={() => setHovered(true)}
+                      onMouseLeave={() => setHovered(false)} 
+                      className="bg-[#0034dd]  text-white text-sm  flex justify-center text-center items-center cursor-pointer lg:h-[5vh] lg:w-[8vw] h-[6vh] w-[40%] transition-transform transform hover:scale-110 hover:shadow-2xl duration-300 ease-in-out cursor-pointer ">Get Started &nbsp; { hovered ? <ArrowRightOutlined/> : <RightOutlined/>}</button>
           </div>
           <div className="image">
             <aside className="flex justify-center lg:justify-start">
@@ -55,7 +66,8 @@ const CentralTabs = () => {
                       <li>UI for Website and App</li>
                       <li>UX for Website and App</li>
             </ul>
-            <button className="bg-[#0034dd] text-sm text-white  flex justify-center text-center items-center cursor-pointer lg:h-[5vh] lg:w-[8vw] h-[6vh] w-[60%] ">Get Started</button>
+            <button                       onMouseEnter={() => setHovered(true)}
+                      onMouseLeave={() => setHovered(false)}  className="bg-[#0034dd] text-sm text-white  flex justify-center text-center items-center cursor-pointer lg:h-[5vh] lg:w-[8vw] h-[6vh] w-[60%] transition-transform transform hover:scale-110 hover:shadow-2xl duration-300 ease-in-out cursor-pointer ">Get Started &nbsp; { hovered ? <ArrowRightOutlined/> : <RightOutlined/>} </button>
           </div>
           <div className="image">
             <aside className="flex justify-center lg:justify-start">
@@ -86,7 +98,8 @@ const CentralTabs = () => {
             <li>Newspaper Advertising</li>
             <li>Native Advertising</li>
   </ul>
-  <button className="bg-[#0034dd] text-sm  text-white flex justify-center text-center items-center cursor-pointer lg:h-[5vh] lg:w-[8vw] h-[6vh] w-[50%]">Get Started</button>
+  <button                  onMouseEnter={() => setHovered(true)}
+                      onMouseLeave={() => setHovered(false)}  className="bg-[#0034dd] text-sm  text-white flex justify-center text-center items-center cursor-pointer lg:h-[5vh] lg:w-[8vw] h-[6vh] w-[50%] transition-transform transform hover:scale-110 hover:shadow-2xl duration-300 ease-in-out cursor-pointer">Get Started &nbsp; { hovered ? <ArrowRightOutlined/> : <RightOutlined/>} </button>
 </div>
 <div className="image">
   <aside className="flex justify-center lg:justify-start">
