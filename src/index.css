@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:where(.css-dev-only-do-not-override-m4timi).ant-tabs .ant-tabs-tab-btn:focus:not(:focus-visible){
+    color: black;
+    font-size: 2vh;
+}
+ :where(.css-dev-only-do-not-override-m4timi).ant-tabs .ant-tabs-tab-remove:focus:not(:focus-visible), :where(.css-dev-only-do-not-override-m4timi).ant-tabs .ant-tabs-tab-btn:active, :where(.css-dev-only-do-not-override-m4timi).ant-tabs .ant-tabs-tab-remove:active {
+    color: black;
+    font-size: 2vh;
+
+}
+:where(.css-dev-only-do-not-override-m4timi).ant-tabs .ant-tabs-tab-btn:focus-visible, :where(.css-dev-only-do-not-override-m4timi).ant-tabs .ant-tabs-tab-remove:focus-visible{
+    color: black;
+    font-size: 2vh;
+
+}
+
+:where(.css-dev-only-do-not-override-m4timi)[class^="ant-tabs"] [class^="ant-tabs"], :where(.css-dev-only-do-not-override-m4timi)[class*=" ant-tabs"] [class^="ant-tabs"]{
+    color: black;
+    font-size: 2vh;  
+     
+}
