@@ -23,7 +23,7 @@ const Footer = () => {
 {title: "Native Advertising",link:"https://ipolygon.co/digital-media-buying-selling/"},
   ]
   return (
-    <div className='bg-black w-[100vw] lg:h-[86vh] h-[130vh]'>
+    <div className='bg-black w-[100vw] lg:h-[86vh] pb-6'>
     <div className=' pt-[7%] lg:pl-[15%] pl-[4%] text-white flex flex-col lg:flex-row   '>
       <div className=' polygon lg:w-[46%]'>
      <h1 className='font-bold text-2xl lg:text-4xl mb-8  leading-10 underline decoration-[#0034dd] underline-offset-8 '>Polygon Pixels LLP (iPolygon)</h1> 
@@ -38,7 +38,7 @@ const Footer = () => {
   <button 
     onMouseEnter={() => setHovered(true)}
     onMouseLeave={() => setHovered(false)} 
-  className=' bg-[#0034dd] ml-[-12%]  h-[6vh] w-[33vw] lg:h-[5vh] lg:w-[8vw] rounded-full transition-transform transform hover:scale-110 hover:shadow-2xl duration-300 ease-in-out cursor-pointer'>Inquire Now &nbsp; { hovered ? <ArrowRightOutlined/> : <RightOutlined/>} </button></div>
+  className=' bg-[#0034dd] text-sm ml-[-12%]  h-[6vh] w-[33vw] lg:h-[5vh] lg:w-[8vw] rounded-full transition-transform transform hover:scale-110 hover:shadow-2xl duration-300 ease-in-out cursor-pointer'>Inquire Now &nbsp; { hovered ? <ArrowRightOutlined/> : <RightOutlined/>} </button></div>
 
 <nav className={`hidden md:flex  items-center gap-8 font-semibold  pt-8`} >
         <a href={'#'} style={{ fontWeight:'400' }} className=' text-white text-md leading-10 tracking-wide hover:text-[#0034dd]' >Home        </a>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Statistics = () => {
   return (
-    <div className='w-[100vw] lg:h-[70vh] h-[100vh] bg-white pt-[20vh]  flex flex-col items-center text-center '>
+    <div className='w-[100vw] lg:h-[70vh] pb-[10vh] bg-white pt-[20vh]  flex flex-col items-center text-center '>
         <h2 className='font-semibold text-2xl lg:text-4xl mb-4  leading-10 '>We grow as our clients grow!</h2>
         <p className=''>We love to see our clients getting results and get ROI.</p>
         <div className='w-[100%] flex flex-col gap-[12vw] lg:flex-row  pt-10 justify-center'>
