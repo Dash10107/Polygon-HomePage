@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-<div className="bg-white   flex flex-col lg:flex-row gap-10 items-center lg:items-center lg:justify-center  mt-20 lg:mt-20" style={{marginTop:"15%",marginBottom:"15%"}}>
+<div className="bg-white   flex flex-col lg:flex-row gap-10 items-center lg:items-center lg:justify-center   lg:mt-20" style={{marginTop:"25%",marginBottom:"15%"}}>
 <div className="text flex flex-col items-center lg:items-start  lg:text-left justify-center  mb-5 lg:mb-0 lg:w-[30%] w-[80%] lg:tracking-widest">
   <h1 className=" font-semibold text-3xl lg:text-5xl mb-8  leading-10">
   About Us
@@ -14,13 +14,13 @@ const About = () => {
                through effective datacentric designing and marketing 
               approach.
   </p>
-  <btn className="bg-[#0034dd]  text-white h-[5vh] w-[8vw] flex justify-center text-center items-center cursor-pointer">Read More</btn>
+  <button className="bg-[#0034dd]  text-white lg:h-[5vh] lg:w-[8vw] h-[5vh] w-[40%] flex justify-center text-center items-center cursor-pointer">Read More</button>
 </div>
 <div className="image">
   <aside className="flex justify-center lg:justify-start">
        <Image
           src={'https://cdn-eoimn.nitrocdn.com/pJaHCAtiamEsJjRFSNeDAczyRWgQTsaP/assets/static/optimized/rev-208622f/wp-content/uploads/2021/12/iPolygon_AboutUs_2-2.png'}
-           width={500}
+           width={450}
            height={370}
            alt="plur centre"
            preview={false}
